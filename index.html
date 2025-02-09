@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Import Google Icon Font -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <title>MY WEBPAGE</title>
+  <style>
+    /* Ensure header background is responsive */
+    header {
+      background: url(pic1.jpg) no-repeat center center;
+      background-size: cover;    
+      min-height: 100vh;
+    }
+
+    /* Ensure uniform card size */
+    .card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 250px; /* Fixed height for images */
+      object-fit: cover;
+    }
+
+    .card-content, .card-reveal {
+      flex-grow: 1; /* Ensures even distribution */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-reveal {
+      min-height: 180px; /* Ensures equal hidden content height */
+    }
+
+    /* Ensure consistent text sizes */
+    .container h3 {
+      font-size: 2rem;
+    }
+
+    .container p {
+      font-size: 1.2rem;
+    }
+
+    .btn {
+      margin-top: 10px;
+    }
+
+    /* New Styling for Content Area */
+    #content-area {
+      background: rgba(255, 255, 255, 0.9); /* White with some transparency */
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      display: none; /* Hidden by default */
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-wrapper grey darken-3">
+            <div class="container">
+                <a href="#" class="brand-logo">MAGICAL WORLD</a>
+                <a href="#" class="sidenav-trigger" data-target="mob"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#" onclick="showHome()">HOME</a></li>
+                    <li><a href="#" onclick="showContact()">CONTACT</a></li>
+                    <li><a href="#" onclick="showAbout()">ABOUT ME</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <ul class="sidenav grey darken-3 center" id="mob">
+            <li><h3 class="black-text white"><b>MAGICAL WORLD</b></h3></li>
+            <li><a href="#" class="waves-effect waves-light white-text" onclick="showHome()">HOME</a></li>
+            <li><a href="#" class="waves-effect waves-light white-text" onclick="showContact()">CONTACT</a></li>
+            <li><a href="#" class="waves-effect waves-light white-text" onclick="showAbout()">ABOUT ME</a></li>
+        </ul>
+
+        <div class="container">
+            <div id="content-area"></div> <!-- Dynamic Content Area -->
+
+            <div id="home-content">
+                <div class="row">
+                    <div class="col s12 m6">
+                        <h3>ENTER INTO THE MAGICAL WORLD "HARRY POTTER"</h3>
+                        <p>
+                            Harry Potter is a series of seven fantasy novels written by British author <b>J. K. Rowling.</b>
+                            The films are imaginative, adventurous, funny, frightening, and <b>magical!</b>
+                            They combine action, fantasy, and friendship, making them successful among children and young adults.
+                            The main character, Harry, is kind, brave, and intelligent. His journey spans eight movies, starting with 
+                            <b>Harry Potter and the Philosopher's Stone</b> and ending with <b>Harry Potter and the Deathly Hallows - Part 2</b>.
+                        </p>
+                        <a href="#" class="waves-effect waves-light black white-text btn">BOOK NOW</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Movie Cards -->
+                    <div class="col s12 m6 l3">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="pic2.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator"><b>Philosopher's Stone</b><i class="material-icons right">more_vert</i></span>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title">ABOUT <i class="material-icons right">close</i></span>
+                                <p>Harry learns he's a wizard and starts his journey at Hogwarts, uncovering secrets about his past.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m6 l3">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="pic3.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator"><b>Prisoner of Azkaban</b><i class="material-icons right">more_vert</i></span>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title">ABOUT <i class="material-icons right">close</i></span>
+                                <p>Harry discovers the truth about his godfather, Sirius Black, and his connection to his parents.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m6 l3">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="pic4.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator"><b>Goblet of Fire</b><i class="material-icons right">more_vert</i></span>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title">ABOUT <i class="material-icons right">close</i></span>
+                                <p>Harry is forced to compete in a deadly wizarding tournament and faces Voldemort's return.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m6 l3">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="pic5.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator"><b>DeathlyHallows Part 2</b><i class="material-icons right">more_vert</i></span>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title">ABOUT <i class="material-icons right">close</i></span>
+                                <p>The final battle between good and evil at Hogwarts, where Harry faces Voldemort for the last time and won.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- jQuery and Materialize JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".sidenav").sidenav();
+    
+            // Fix: Ensure Card Reveal Works
+            $(".activator").click(function () {
+                $(this).closest(".card").find(".card-reveal").slideDown();
+            });
+    
+            $(".card-reveal .card-title i").click(function () {
+                $(this).closest(".card-reveal").slideUp();
+            });
+        });
+    
+        function showContent(content) {
+            $("#home-content").hide();
+            $("#content-area").html(content).show();
+        }
+    
+        function showContact() {
+            showContent(`
+                <h3>Contact Me</h3>
+                <p>Name: <b>Kurshith Banu M</b><br>Email: <b>kurshitheee20@gmail.com</b></p>
+                <textarea id="messageBox" placeholder="Your Message"></textarea>
+                <button class="btn black white-text" onclick="submitMessage()">Submit</button>
+                <p id="confirmationMessage" style="color: green; margin-top: 10px; display: none;"><b>Your message has been submitted!</b></p>
+            `);
+        }
+    
+        function submitMessage() {
+            let message = $("#messageBox").val().trim();
+            if (message) {
+                $("#confirmationMessage").show();
+            } else {
+                alert("Please enter a message before submitting.");
+            }
+        }
+    
+        function showAbout() {
+            showContent("<h3>About Me</h3><p>As a fresher, I intend to build a career in a leading corporate environment with committed and dedicated people, which will help me to explore myself fully and realize my potential.</p>");
+        }
+    
+        function showHome() {
+            $("#content-area").hide();
+            $("#home-content").show();
+        }
+    </script>
+    
+</body>
+</html>
